@@ -5,10 +5,13 @@ function buildStation (e) {
       var urlArray = result.map(tab => tab.url);
       chrome.storage.sync.get(['stations'], (res) => {
 
+        const buttonId = getRandomId();
         var stations = res.stations || [];
+        
         var newStation = {
           name: stationName,
           links: urlArray,
+          id: buttonId,
         }
 
         stations.push(newStation);

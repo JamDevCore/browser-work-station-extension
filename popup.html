@@ -3,59 +3,71 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
-    body {
-      background:#eee;
-      width: 550px;
-      margin-left: 20px;
-      height: 300px;
-      font-family: 'Roboto', sans-serif;
-    }
-    .linkButton {
-      background-color: #4D90FE;
-      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
-      background-image: -moz-linear-gradient(top,#4D90FE,#4787ED);
-      background-image: -ms-linear-gradient(top,#4D90FE,#4787ED);
-      background-image: -o-linear-gradient(top,#4D90FE,#4787ED);
-      background-image: linear-gradient(top,#4D90FE,#4787ED);
-      border: 1px solid #3079ED;
-      color:white;
-  }
-    .linkButton:hover {
-      background-color: #357AE8;
-      background-image: -webkit-linear-gradient(top,#4D90FE,#357AE8);
-      background-image: -moz-linear-gradient(top,#4D90FE,#357AE8);
-      background-image: -ms-linear-gradient(top,#4D90FE,#357AE8);
-      background-image: -o-linear-gradient(top,#4D90FE,#357AE8);
-      background-image: linear-gradient(top,#4D90FE,#357AE8);
-      border: 1px solid #3079ED;
-  }
-  .submitButton {
-    background-image: -webkit-linear-gradient(top,#FDA352,#FB8F3D);
-    background-image: -moz-linear-gradient(top,#FDA352,#FB8F3D);
-    background-image: -ms-linear-gradient(top,#FDA352,#FB8F3D);
-    background-image: -o-linear-gradient(top,#FDA352,#FB8F3D);
-    background-image: linear-gradient(top,#FDA352,#FB8F3D);
-    color:white;
-    border: 1px solid #FB8F3D;
-  }
-  .submitButton:hover {
-    background-image: -webkit-linear-gradient(top,#FD934D,#F9760B);
-    background-image: -moz-linear-gradient(top,#FD934D,#F9760B);
-    background-image: -ms-linear-gradient(top,#FD934D,#F9760B);
-    background-image: -o-linear-gradient(top,#FD934D,#F9760B);
-    background-image: linear-gradient(top,#FD934D,#F9760B);
-    border: 1px solid #EB5200;
-  }
-    p {
-      width: 500px;
-    }
+      body {
+        background:#eee;
+        width: 550px;
+        margin-left: 20px;
+        height: 300px;
+        font-family: 'Roboto', sans-serif;
+      }
+      #titleButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      p {
+        width: 500px;
+      }
       button {
         height: 25px;
-        width: 235px;
         outline: none;
         margin-right: 10px;
         margin-bottom: 10px;
         border: none;
+      }
+      .linkButton {
+        min-width: 150px;
+        background-color: #4D90FE;
+        background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+        background-image: -moz-linear-gradient(top,#4D90FE,#4787ED);
+        background-image: -ms-linear-gradient(top,#4D90FE,#4787ED);
+        background-image: -o-linear-gradient(top,#4D90FE,#4787ED);
+        background-image: linear-gradient(top,#4D90FE,#4787ED);
+        border: 1px solid #3079ED;
+        color:white;
+      }
+      .linkButton:hover {
+        background-color: #357AE8;
+        background-image: -webkit-linear-gradient(top,#4D90FE,#357AE8);
+        background-image: -moz-linear-gradient(top,#4D90FE,#357AE8);
+        background-image: -ms-linear-gradient(top,#4D90FE,#357AE8);
+        background-image: -o-linear-gradient(top,#4D90FE,#357AE8);
+        background-image: linear-gradient(top,#4D90FE,#357AE8);
+        border: 1px solid #3079ED;
+      }
+      .submitButton {
+        width: 235px;
+        background-image: -webkit-linear-gradient(top,#FDA352,#FB8F3D);
+        background-image: -moz-linear-gradient(top,#FDA352,#FB8F3D);
+        background-image: -ms-linear-gradient(top,#FDA352,#FB8F3D);
+        background-image: -o-linear-gradient(top,#FDA352,#FB8F3D);
+        background-image: linear-gradient(top,#FDA352,#FB8F3D);
+        color:white;
+        border: 1px solid #FB8F3D;
+      }
+      .submitButton:hover {
+        background-image: -webkit-linear-gradient(top,#FD934D,#F9760B);
+        background-image: -moz-linear-gradient(top,#FD934D,#F9760B);
+        background-image: -ms-linear-gradient(top,#FD934D,#F9760B);
+        background-image: -o-linear-gradient(top,#FD934D,#F9760B);
+        background-image: linear-gradient(top,#FD934D,#F9760B);
+        border: 1px solid #EB5200;
+      }
+      div > .deleteButton {
+        background-color: transparent;
+        border: none;
+        width: 10px !important;
+        padding: 5px;
       }
       .linkButton {
         background-color: #a8c0fc;
@@ -87,7 +99,27 @@
         width: 235px;
         margin-top: 20px;
         margin-bottom: 20px;
-
+      }
+      #clearButton {
+        margin: 15px;
+        background: -webkit-linear-gradient(top, #DD4B39, #D14836);
+        background: -moz-linear-gradient(top, #DD4B39, #D14836);
+        background: -ms-linear-gradient(top, #DD4B39, #D14836);
+        border: 1px solid #DD4B39;
+        color: white;
+        text-shadow: 0 1px 0 #C04131;
+      }
+      #clearButton:hover {
+        background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+        background: -moz-linear-gradient(top, #DD4B39, #C53727);
+        background: -ms-linear-gradient(top, #DD4B39, #C53727);
+        border: 1px solid #AF301F;
+      }
+      #clearButton:active {
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+        background: -webkit-linear-gradient(top, #D74736, #AD2719);
+        background: -moz-linear-gradient(top, #D74736, #AD2719);
+        background: -ms-linear-gradient(top, #D74736, #AD2719);
       }
     </style>
   </head>
@@ -97,7 +129,9 @@
   <p>To start add a name for your work station. You can then add the links you want to save one line at a time, or get all the currently open tabs from your window.</p>
   <p>Once submitted you can click your work station button to get started</p>
   <div>
-    <h2 id="workStationTitle"></h2>
+    <div id="titleButton">
+      <h2 id="workStationTitle"></h2>
+    </div>
     <div id ="linkList">
 
     </div>
