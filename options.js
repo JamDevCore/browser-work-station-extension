@@ -7,10 +7,12 @@ function createDeleteButtons() {
 
         var button = document.createElement('button');
         var name = document.createAttribute('name');
+        var className = document.createAttribute('class');
 
         name.value = station.name;
-
+        className.value = 'deleteStationButton'
         button.setAttributeNode(name)
+        button.setAttributeNode(className)
         button.appendChild(document.createTextNode(`Delete ${station.name}`));
 
         page.appendChild(button)

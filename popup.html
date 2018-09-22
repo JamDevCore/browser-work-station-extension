@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
     body {
-      width: 600px;
-      height: 300px
+      background:#eee;
+      width: 550px;
+      margin-left: 20px;
+      height: 300px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .linkButton {
+      background-color: #4D90FE;
+      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: -moz-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: -ms-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: -o-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: linear-gradient(top,#4D90FE,#4787ED);
+      border: 1px solid #3079ED;
+      color:white;
+  }
+    .linkButton:hover {
+      background-color: #357AE8;
+      background-image: -webkit-linear-gradient(top,#4D90FE,#357AE8);
+      background-image: -moz-linear-gradient(top,#4D90FE,#357AE8);
+      background-image: -ms-linear-gradient(top,#4D90FE,#357AE8);
+      background-image: -o-linear-gradient(top,#4D90FE,#357AE8);
+      background-image: linear-gradient(top,#4D90FE,#357AE8);
+      border: 1px solid #3079ED;
+  }
+  .submitButton {
+    background-image: -webkit-linear-gradient(top,#FDA352,#FB8F3D);
+    background-image: -moz-linear-gradient(top,#FDA352,#FB8F3D);
+    background-image: -ms-linear-gradient(top,#FDA352,#FB8F3D);
+    background-image: -o-linear-gradient(top,#FDA352,#FB8F3D);
+    background-image: linear-gradient(top,#FDA352,#FB8F3D);
+    color:white;
+    border: 1px solid #FB8F3D;
+  }
+  .submitButton:hover {
+    background-image: -webkit-linear-gradient(top,#FD934D,#F9760B);
+    background-image: -moz-linear-gradient(top,#FD934D,#F9760B);
+    background-image: -ms-linear-gradient(top,#FD934D,#F9760B);
+    background-image: -o-linear-gradient(top,#FD934D,#F9760B);
+    background-image: linear-gradient(top,#FD934D,#F9760B);
+    border: 1px solid #EB5200;
+  }
+    p {
+      width: 500px;
     }
       button {
-        height: 15px;
+        height: 25px;
+        width: 235px;
         outline: none;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: none;
+      }
+      .linkButton {
+        background-color: #a8c0fc;
       }
       ul {
         list-style-type: none;
       }
       textarea {
-        width: 500px;
+        width: 520px;
         height: 100px;
       }
       form {
@@ -26,21 +76,26 @@
       form * {
       }
       input {
-        width: 200px;
-        margin-bottom: 15px;
+        width: 250px;
+        height: 20px;
+        margin-right: 30px;
       }
-
+      .submitButton {
+        background-color: #39C16C;
+      }
       #submitLinksButton {
-        width: 200px;
+        width: 235px;
         margin-top: 20px;
         margin-bottom: 20px;
+
       }
     </style>
   </head>
   <body>
-  <h1>Your work stations</h1>
+  <h1>Browser work station</h1>
   <h3>Create ready made work stations using all your most used links</h3>
-  <p>Get started by adding a name for your work station, and the associated links one line at a time. Once submitted you can click your work station button to get started</p>
+  <p>To start add a name for your work station. You can then add the links you want to save one line at a time, or get all the currently open tabs from your window.</p>
+  <p>Once submitted you can click your work station button to get started</p>
   <div>
     <h2 id="workStationTitle"></h2>
     <div id ="linkList">
@@ -48,17 +103,17 @@
     </div>
   </div>
   <div>
-    <h3>Grab all current open urls and create work station</h3>
-    <button id="quickBuildStation">Quick build</button>
-  </div>
-  <div>
   <form>
-        <h2>Add a new work station</h2>
-    <p>Add your station name here</p>
-    <input id="stationName" />
-    <p> Add each link on new line</p>
+    <h2>Add a new work station</h2>
+    <p style="font-weight: bold;">Station title</p>
+    <div>
+      <input id="stationName" />
+      <button class="submitButton" id="quickBuildStation">Get current tabs</button>
+    </div>
+    <div id ="warningDiv"></div>
+    <p> Alternatively add links here, one per line</p>
     <textarea id = "linkBox"></textarea>
-    <button id = "submitLinksButton">Submit</button>
+    <button class="submitButton" id = "submitLinksButton">Submit</button>
   </form>
     </div>
 
