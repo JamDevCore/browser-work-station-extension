@@ -3,7 +3,6 @@
    "version": "1.0",
    "description": "Open all the websites you need at once!",
    "manifest_version": 2,
-   "options_page": "options.html",
    "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
    "browser_action": {
       "default_popup": "popup.html",
