@@ -1,6 +1,6 @@
 {
    "name": "Browser work station",
-   "version": "1.0",
+   "version": "0.0.1",
    "description": "Open all the websites you need at once!",
    "manifest_version": 2,
    "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
