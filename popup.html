@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body {
+      width: 600px;
+      height: 300px
+    }
+      button {
+        height: 15px;
+        outline: none;
+      }
+      ul {
+        list-style-type: none;
+      }
+      textarea {
+        width: 500px;
+        height: 100px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      form * {
+      }
+      input {
+        width: 200px;
+        margin-bottom: 15px;
+      }
+
+      #submitLinksButton {
+        width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>Your work stations</h1>
+  <h3>Create ready made work stations using all your most used links</h3>
+  <p>Get started by adding a name for your work station, and the associated links one line at a time. Once submitted you can click your work station button to get started</p>
+  <div>
+    <h2 id="workStationTitle"></h2>
+    <div id ="linkList">
+
+    </div>
+  </div>
+  <div>
+    <h3>Grab all current open urls and create work station</h3>
+    <button id="quickBuildStation">Quick build</button>
+  </div>
+  <div>
+  <form>
+        <h2>Add a new work station</h2>
+    <p>Add your station name here</p>
+    <input id="stationName" />
+    <p> Add each link on new line</p>
+    <textarea id = "linkBox"></textarea>
+    <button id = "submitLinksButton">Submit</button>
+  </form>
+    </div>
+
+    <script src="submitWorkStation.js"></script>
+    <script src="createSavedLinks.js"></script>
+    <script src="setText.js"></script>
+    <script src="quickBuildStation.js"></script>
+  </body>
+</html>
